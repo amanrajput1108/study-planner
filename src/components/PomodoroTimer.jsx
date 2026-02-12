@@ -259,9 +259,17 @@ export default function PomodoroTimer() {
           justify-content: center;
         }
 
-        .btn-secondary:hover {
-          background: rgba(255,255,255,0.2);
-          transform: rotate(90deg);
+        @media (max-width: 480px) {
+          .timer-wrapper {
+             width: 250px;
+             height: 250px;
+          }
+          .time-text {
+             font-size: 2.5rem;
+          }
+          .timer-header {
+             flex-wrap: wrap;
+          }
         }
       `}</style>
         </div>

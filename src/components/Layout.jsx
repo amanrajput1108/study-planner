@@ -1,3 +1,5 @@
+import Logo from './Logo';
+
 export default function Layout({ children }) {
   return (
     <div className="layout">
@@ -8,7 +10,10 @@ export default function Layout({ children }) {
       <header className="main-header glass-panel">
         <div className="container header-content">
           <nav className="nav">
-            <h1 className="logo">Study<span className="logo-accent">Plan</span></h1>
+            <div className="logo-container">
+              <Logo size={36} />
+              <h1 className="logo-text">Study<span className="logo-accent">Plan</span></h1>
+            </div>
           </nav>
           <div className="header-actions">
             {/* Header actions can go here */}
@@ -73,10 +78,17 @@ export default function Layout({ children }) {
           align-items: center;
         }
         
-        .logo {
+        .logo-container {
+          display: flex;
+          align-items: center;
+          gap: 0.75rem;
+        }
+        
+        .logo-text {
           font-size: 1.75rem;
           font-weight: 800;
           letter-spacing: -0.03em;
+          margin-bottom: 0;
         }
         
         .logo-accent {
@@ -118,6 +130,15 @@ export default function Layout({ children }) {
              margin: 0;
              border-radius: 0;
              top: 0;
+             background: var(--bg-color); /* Solid bg on mobile to cover content */
+             border-bottom: 1px solid rgba(255,255,255,0.1);
+           }
+           .container {
+             padding: 0 1rem;
+           }
+           .main-footer {
+             margin-top: 2rem;
+             padding: 2rem 0;
            }
         }
       `}</style>

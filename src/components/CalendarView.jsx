@@ -153,6 +153,19 @@ export default function CalendarView() {
         .calendar-day.today .task-dot {
           background: white !important;
         }
+        @media (max-width: 480px) {
+          .calendar-day {
+            height: 2.5rem;
+            font-size: 0.8rem;
+          }
+          .task-dot {
+            width: 3px;
+            height: 3px;
+          }
+          .calendar-header h3 {
+             font-size: 1rem;
+          }
+        }
       `}</style>
     </div>
   );

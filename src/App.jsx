@@ -48,9 +48,14 @@ function App() {
           border: 1px dashed #27272a;
           margin-bottom: 2rem;
         }
-        @media (max-width: 768px) {
+        @media (max-width: 900px) {
           .dashboard-grid {
             grid-template-columns: 1fr;
+            gap: 1.5rem;
+          }
+          .page-header {
+            margin-bottom: 1.5rem;
+            text-align: center;
           }
         }
       `}</style>

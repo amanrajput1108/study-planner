@@ -88,6 +88,13 @@ export default function TaskForm() {
         @media (max-width: 600px) {
           .form-row {
             flex-direction: column;
+            gap: 0.75rem;
+          }
+          .task-form {
+            padding: 1.25rem;
+          }
+          .task-input {
+            font-size: 1rem;
           }
         }
       `}</style>
